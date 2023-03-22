@@ -15,7 +15,7 @@ public class Organization {
 
     private int balance;
 
-    @OneToMany (mappedBy = "organization")
+    @OneToMany (mappedBy = "organization", cascade = CascadeType.ALL)
     private List<Good> goods;
 
     @OneToOne(fetch = FetchType.LAZY, cascade = {
